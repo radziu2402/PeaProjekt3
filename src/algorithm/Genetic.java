@@ -112,6 +112,7 @@ public class Genetic {
         if (ratedPopulation[minIndex] < bestSolution) {
             bestSolutionTime = System.currentTimeMillis() - millisActualTime;
             bestSolution = ratedPopulation[minIndex];
+            System.out.println("Najlepszy teraz:" + bestSolution);
             solutions.add(new TimeResultPair(bestSolutionTime, bestSolution));
             bestPath = population[minIndex].clone();
         }
@@ -129,7 +130,7 @@ public class Genetic {
     }
 
     private int[] tournamentSelection(int[][] population, int[] ratedPopulation) {
-        int tournamentSize = (int) (populationSize * 0.35);
+        int tournamentSize = (int) (populationSize * 0.30);
         int result = Integer.MAX_VALUE;
         int[] permutation = new int[graph.size - 1];
 
