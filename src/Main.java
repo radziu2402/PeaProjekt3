@@ -8,20 +8,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-//        long timeLimit = -1;
-//        int populationSize = -1;
-//        double crossRate = -1;
-//        double mutationRate = -1;
-//        int crossoverMethod = -1;
-//        int mutationMethod = -1;
-        long timeLimit = 120000;
-        int populationSize = 10;
-        double crossRate = 0.8;
-        double mutationRate = 0.05;
-        int crossoverMethod = 1;
-        int mutationMethod = 1;
-        FromFileReader fromFileReaderr = new FromFileReader();
-        Matrix matrix = fromFileReaderr.loadFromFile("ftv170.atsp");
+        long timeLimit = -1;
+        int populationSize = -1;
+        double crossRate = -1;
+        double mutationRate = -1;
+        int crossoverMethod = -1;
+        int mutationMethod = -1;
+        Matrix matrix = null;
         Genetic genetic;
         Scanner in = new Scanner(System.in);
         int menu = -1;
